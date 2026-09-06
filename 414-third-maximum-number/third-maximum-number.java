@@ -1,8 +1,6 @@
 class Solution {
     public int thirdMax(int[] nums) {
 
-        if(nums.length == 1) return nums[0];
-        if(nums.length == 2) return nums[0]>nums[1]?nums[0]:nums[1];
         
         long max = Long.MIN_VALUE;
         long max2 = Long.MIN_VALUE;
