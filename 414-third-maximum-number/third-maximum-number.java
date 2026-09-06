@@ -18,7 +18,7 @@ class Solution {
                 max3 = max2;
                 max2 = max;
                 max = nums[i];
-            }else if(nums[i]>max2 && max != nums[i]){
+            }else if(nums[i]>max2){
                 max3 = max2;
                 max2 = nums[i];
             }else if(nums[i]>max3){
