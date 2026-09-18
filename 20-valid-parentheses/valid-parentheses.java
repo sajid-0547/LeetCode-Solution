@@ -5,15 +5,10 @@ class Solution {
         char[] ch = s.toCharArray();
 
         for(int i=0;i<s.length();i++){
-            if(st.size()!=0 && st.peek()=='(' && ch[i]==')'){
+            if(st.size()!=0 && ((st.peek()=='(' && ch[i]==')') || (st.peek()=='{' && ch[i]=='}') || (st.peek()=='[' && ch[i]==']'))){
                 st.pop();
             }
-            else if(st.size()!=0 && st.peek()=='{' && ch[i]=='}'){
-                st.pop();
-            }
-            else if(st.size()!=0 && st.peek()=='[' && ch[i]==']'){
-                st.pop();
-            }else{
+            else{
                 st.push(ch[i]);
             }
         }
